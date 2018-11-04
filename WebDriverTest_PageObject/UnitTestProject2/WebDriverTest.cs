@@ -31,24 +31,24 @@ namespace PageObjectPattern
         [TestMethod]
         public void SearchTextInBing()
         {
-            PageObject_WebDriverTest googleMainPage = new PageObject_WebDriverTest(this.Driver);
-            googleMainPage.Navigate();
+            PageObject_WebDriverTest poiskAvia = new PageObject_WebDriverTest(this.Driver);
+            poiskAvia.Navigate();
             System.Threading.Thread.Sleep(5000);
 
-            googleMainPage.Chto_mashaet.Click();
+            poiskAvia.Chto_mashaet.Click();
 
-            googleMainPage.Otkyda_letim.Click();
-            googleMainPage.Otkyda_letim_text.SendKeys("Пекин,");
+            poiskAvia.Otkyda_letim.Click();
+            poiskAvia.Otkyda_letim_text.SendKeys("Пекин,");
             System.Threading.Thread.Sleep(2000);
 
-            googleMainPage.Kyda_letim_text.SendKeys("");
+            poiskAvia.Kyda_letim_text.SendKeys("");
             System.Threading.Thread.Sleep(2000);
 
-            googleMainPage.Date.SendKeys("21.11.2018");
-            googleMainPage.Date.SendKeys(Keys.Enter);
+            poiskAvia.Date.SendKeys("21.11.2018");
+            poiskAvia.Date.SendKeys(Keys.Enter);
             System.Threading.Thread.Sleep(2000);
 
-            googleMainPage.Knopka_Poisk.Click();
+            poiskAvia.Knopka_Poisk.Click();
 
             Assert.AreEqual(Driver.FindElement(By.ClassName("nemo-flights-form__route__segment__item__error")).Text, "Укажите пункт прилета", "No point of arrival indicated");
         }
