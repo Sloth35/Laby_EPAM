@@ -1,27 +1,28 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿//using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 
 namespace PageObject_Framework.Pages
 {
-    [TestClass]
+    [TestFixture]
     public class AviaTest
     {
         public IWebDriver driver;
 
-        [TestInitialize]
+        [SetUp]
         public void SetupTest()
         {
             driver = new FirefoxDriver();
         }
 
-        [TestCleanup]
+        [TearDown]
         public void TeardownTest()
         {
             driver.Quit();
         }
 
-        [TestMethod]
+        [Test]
         public void Search_avia()
         {
             SearchAvia search_avia = new SearchAvia(driver);
