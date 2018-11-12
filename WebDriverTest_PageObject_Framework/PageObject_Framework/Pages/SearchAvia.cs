@@ -3,7 +3,7 @@ using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
 
-namespace UnitTestProject2.Pages
+namespace PageObject_Framework.Pages
 {
     public class SearchAvia
     {
@@ -30,20 +30,20 @@ namespace UnitTestProject2.Pages
             wait.Until(ExpectedConditions.ElementToBeClickable(By.ClassName("sendpulse-disallow-btn")));
             driver.FindElement(By.ClassName("sendpulse-disallow-btn")).Click();
         }
-        public void Input_departue_and_destination_country()
+        public void Input_departue_and_destination_country(string departue_country, string destination_country)
         {
             wait.Until(ExpectedConditions.ElementToBeClickable(By.ClassName("nemo-ui-dummiedInput__dummy")));
             driver.FindElement(By.ClassName("nemo-ui-dummiedInput__dummy")).Click();
-            driver.FindElement(By.ClassName("nemo-ui-textInput__input")).SendKeys("Пекин");
+            driver.FindElement(By.ClassName("nemo-ui-textInput__input")).SendKeys(departue_country);
             wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("ui-id-1")));
             driver.FindElement(By.ClassName("nemo-flights-form__geoAC__item_aggregationRoot")).Click();
-            driver.FindElement(By.ClassName("js-autofocus-field_arrival")).SendKeys("Нью-Йорк");
+            driver.FindElement(By.ClassName("js-autofocus-field_arrival")).SendKeys(destination_country);
             wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("ui-id-6")));
             driver.FindElement(By.Id("ui-id-6")).Click();
         }
-        public void Input_date()
+        public void Input_date(string input_date)
         {
-            date.SendKeys("21.11.2018");
+            date.SendKeys(input_date);
             date.SendKeys(Keys.Enter);
         }
         public void Selection_only_straight_route()

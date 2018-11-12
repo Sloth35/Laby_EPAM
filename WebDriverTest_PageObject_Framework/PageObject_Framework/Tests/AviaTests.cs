@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 
-namespace UnitTestProject2.Pages
+namespace PageObject_Framework.Pages
 {
     [TestClass]
     public class AviaTest
@@ -27,8 +27,8 @@ namespace UnitTestProject2.Pages
             SearchAvia search_avia = new SearchAvia(driver);
             search_avia.Navigate();
             search_avia.Close_Sendpulse();
-            search_avia.Input_departue_and_destination_country();
-            search_avia.Input_date();
+            search_avia.Input_departue_and_destination_country("Пекин", "Нью-Йорк");
+            search_avia.Input_date("21.11.2018");
             search_avia.Selection_only_straight_route();
             search_avia.Choise_2_passengers();
             Assert.AreEqual(driver.FindElement(By.ClassName("nemo-flights-results__flightsGroup__leg__selector__footer__transfers__notransfers")).Text, "Без пересадок", "Warning: Showing flights with transfers");
