@@ -6,7 +6,7 @@ using OpenQA.Selenium.Firefox;
 namespace PageObject_Framework.Pages
 {
     [TestFixture]
-    public class AviaTest
+    public class AviaTests
     {
         public IWebDriver driver;
 
@@ -23,7 +23,7 @@ namespace PageObject_Framework.Pages
         }
 
         [Test]
-        public void Search_avia()
+        public void AviaTest_Direct_route_selection()
         {
             SearchAvia search_avia = new SearchAvia(driver);
             search_avia.Navigate();
