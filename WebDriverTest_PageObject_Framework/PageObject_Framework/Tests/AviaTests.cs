@@ -22,9 +22,9 @@ namespace PageObject_Framework.Pages
         }
 
         [Test]
-        public void AviaTest_Direct_route_selection()
+        public void Selection_straight_route()
         {
-            SearchAvia search_avia = new SearchAvia(driver);
+            Selection_only_straight_routes search_avia = new Selection_only_straight_routes(driver);
             search_avia.Navigate();
             search_avia.Close_Sendpulse();
             search_avia.Input_departue_and_destination_country("Пекин", "Нью-Йорк");

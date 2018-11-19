@@ -61,7 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\SearchAvia.cs" />
+    <Compile Include="Pages\Selection_only_straight_routes.cs" />
     <Compile Include="Tests\AviaTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -5,7 +5,7 @@ using System;
 
 namespace PageObject_Framework.Pages
 {
-    public class SearchAvia
+    public class Selection_only_straight_routes
     {
         IWebDriver driver;
         WebDriverWait wait;
@@ -13,7 +13,7 @@ namespace PageObject_Framework.Pages
         [FindsBy(How = How.ClassName, Using = "js-autofocus-field_date")]
         public IWebElement date { get; set; }
 
-        public SearchAvia(IWebDriver browser)
+        public Selection_only_straight_routes(IWebDriver browser)
         {
             driver = browser;
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
