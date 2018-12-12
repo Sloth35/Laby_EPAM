@@ -28,7 +28,7 @@ namespace WebDriverTest_PageObject
             search_avia.Navigate();
             search_avia.Close_Sendpulse();
             search_avia.Input_departue_and_destination_country("Пекин", "Нью-Йорк");
-            search_avia.Input_date("21.11.2018");
+            search_avia.Input_date("21.12.2018");
             search_avia.Choise_0_passengers();
             Assert.AreEqual(driver.FindElement(By.ClassName("nemo-flights-form__passengers__error")).Text, "Нет пассажиров", "Warning: Choised 0 passengers");
         }
