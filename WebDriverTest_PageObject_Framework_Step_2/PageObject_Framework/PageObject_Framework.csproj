@@ -62,14 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Driver\DriverInstance.cs" />
-    <Compile Include="Pages\Selection_0_passengers.cs" />
-    <Compile Include="Pages\Selection_only_straight_routes.cs" />
-    <Compile Include="Pages\Selection_only_straight_routes_and_buizness_class.cs" />
-    <Compile Include="Pages\Selection_only_straight_routes_and_not_fiill_departue_country.cs" />
-    <Compile Include="Pages\Selection_only_straight_routes_and_return_date.cs" />
-    <Compile Include="Pages\Selection_only_straight_routes_plus_minus_two_days.cs" />
-    <Compile Include="Pages\Selection_only_straight_routes_use_undo_button.cs" />
-    <Compile Include="Pages\Selection_routes_with_return_date.cs" />
+    <Compile Include="Pages\TopAviaPage.cs" />
     <Compile Include="Steps\Steps.cs" />
     <Compile Include="Tests\AviaTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
