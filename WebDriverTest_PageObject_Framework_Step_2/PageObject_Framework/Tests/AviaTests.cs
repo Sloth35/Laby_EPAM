@@ -67,5 +67,17 @@ namespace PageObject_Framework.Pages
             steps.Selection_routes_with_return_date();
             Assert.AreEqual(steps.Return_message_selection_routes_with_return_date(), "Без пересадок", "Warning: Showing flights with transfers");
         }
+        [Test]
+        public void Selection_only_straight_routes_with_return_date__moth_ago_use_undo_button()
+        {
+            steps.Selection_only_straight_routes_with_return_date__moth_ago_use_undo_button();
+            Assert.AreEqual(steps.Return_message_selection_only_straight_routes_use_undo_button(), "Поменяйте что-нибудь", "Warning: Showing flights with transfers");
+        }
+        [Test]
+        public void Selection_only_straight_routes_with_return_date_moth_ago_and_buizness_class()
+        {
+            steps.Selection_only_straight_routes_with_return_date_moth_ago_and_buizness_class();
+            Assert.AreEqual(steps.Return_message_selection_only_straight_routes_and_buizness_class(), "Без пересадок", "Warning: Showing flights with transfers");
+        }
     }
 }

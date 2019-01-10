@@ -150,6 +150,34 @@ namespace PageObject_Framework.Steps
             topAviaPage.Selection_only_straight_route();
             topAviaPage.Choise_2_passengers();
         }
+        public void Selection_only_straight_routes_with_return_date__moth_ago_use_undo_button()
+        {
+            topAviaPage = new Pages.TopAviaPage(this.driver);
+            string departueDate = DateTime.Today.AddDays(+10).ToString();
+            string arrivalDate = DateTime.Today.AddDays(+30).ToString();
+            topAviaPage.Navigate();
+            topAviaPage.Close_Sendpulse();
+            topAviaPage.Input_departue_and_destination_country("Пекин", "Нью-Йорк");
+            topAviaPage.Input_date(departueDate);
+            topAviaPage.Input_Departure_Date(arrivalDate);
+            topAviaPage.Selection_only_straight_route();
+            topAviaPage.Choise_2_passengers();
+            topAviaPage.Selection_button_edit();
+        }
+        public void Selection_only_straight_routes_with_return_date_moth_ago_and_buizness_class()
+        {
+            topAviaPage = new Pages.TopAviaPage(this.driver);
+            string departueDate = DateTime.Today.AddDays(+10).ToString();
+            string arrivalDate = DateTime.Today.AddDays(+30).ToString();
+            topAviaPage.Navigate();
+            topAviaPage.Close_Sendpulse();
+            topAviaPage.Input_departue_and_destination_country("Пекин", "Нью-Йорк");
+            topAviaPage.Input_date(departueDate);
+            topAviaPage.Input_Departure_Date(arrivalDate);
+            topAviaPage.Selection_type_tickets();
+            topAviaPage.Selection_only_straight_route();
+            topAviaPage.Choise_2_passengers();
+        }
         public string Return_message_selection_routes_with_return_date()
         {
             return topAviaPage.GetMessageWithReturnDate();
